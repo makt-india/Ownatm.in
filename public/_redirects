@@ -1,0 +1,9 @@
+# Force non-www to root domain
+https://www.ownatm.in/* https://ownatm.in/:splat 301!
+
+# Force HTTP to HTTPS
+http://ownatm.in/* https://ownatm.in/:splat 301!
+http://www.ownatm.in/* https://ownatm.in/:splat 301!
+
+# SPA fallback for Next static export
+/* /index.html 200
