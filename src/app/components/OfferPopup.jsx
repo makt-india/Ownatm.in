@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
 
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ShieldCheck, Zap, Clock, ArrowRight } from "lucide-react";
+import { X, ShieldCheck, Zap, ArrowRight } from "lucide-react";
 
 export default function OfferPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +14,7 @@ export default function OfferPopup() {
       if (!hasSeenPopup) {
         setIsVisible(true);
       }
-    }, 7000); // show faster (7s is better than 10s)
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -54,15 +53,15 @@ export default function OfferPopup() {
             </button>
 
             {/* Header */}
-            <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 text-center" >
+            <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-6 text-center">
               <div className="inline-flex p-3 bg-black/20 rounded-full mb-3">
                 <ShieldCheck size={28} className="text-black" />
               </div>
               <h3 className="text-black text-2xl font-black uppercase tracking-wide">
-                Care360 is FREE
+                Care360 Support Included
               </h3>
               <p className="text-black/80 text-sm font-bold mt-1">
-                Valid Until Feb 28, 2026
+                Structured Operational & Compliance Assistance
               </p>
             </div>
 
@@ -71,49 +70,44 @@ export default function OfferPopup() {
 
               <div className="mb-5">
                 <p className="text-slate-400 line-through text-lg">
-                  ₹30,000 Lifetime Activation
+                  Estimated Activation Value: ₹30,000
                 </p>
                 <h4 className="text-5xl font-black text-yellow-500">
                   ₹0
                 </h4>
                 <p className="text-sm text-slate-400 mt-1">
-                  Limited Period Strategic Expansion Offer
+                  Included for eligible franchise applicants
                 </p>
               </div>
 
               <div className="text-left space-y-3 text-sm text-slate-300 mb-6">
                 <div className="flex items-start gap-2">
                   <Zap size={16} className="text-yellow-500 mt-1" />
-                  Growth Boost: GMB Ranking & Location Optimization
+                  Location Optimization & Visibility Guidance
                 </div>
                 <div className="flex items-start gap-2">
                   <ShieldCheck size={16} className="text-yellow-500 mt-1" />
-                  Tax & 194N Compliance Handling
+                  Tax & 194N Compliance Assistance
                 </div>
                 <div className="flex items-start gap-2">
                   <ShieldCheck size={16} className="text-yellow-500 mt-1" />
-                  Payout Dispute & Settlement Protection
+                  Payout Review & Dispute Coordination
                 </div>
                 <div className="flex items-start gap-2">
                   <ShieldCheck size={16} className="text-yellow-500 mt-1" />
-                  Insurance & Operational Risk Support
+                  Operational Risk Advisory Support
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-2 text-xs text-red-400 font-bold mb-6">
-                <Clock size={14} />
-                Offer Ends Feb 28, 2026 – No Extensions
-              </div>
-
-<Link
-  href="/become-franchise"
-  className="w-full py-4 bg-yellow-500 text-black rounded-xl font-extrabold flex items-center justify-center gap-2 hover:bg-yellow-400 transition-all active:scale-95"
->
-  Activate Free Care360 <ArrowRight size={18} />
-</Link>
+              <Link
+                href="/become-franchise"
+                className="w-full py-4 bg-yellow-500 text-black rounded-xl font-extrabold flex items-center justify-center gap-2 hover:bg-yellow-400 transition-all active:scale-95"
+              >
+                Check Eligibility <ArrowRight size={18} />
+              </Link>
 
               <p className="text-[10px] text-slate-500 mt-3">
-                Free activation available for new partners only.
+                Benefits are subject to documentation approval and operator verification.
               </p>
             </div>
           </motion.div>
