@@ -1,0 +1,10 @@
+# ------------------------------------
+# ROBOTS.TXT – OWNATM.IN
+# ------------------------------------
+
+User-agent: *
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /_next/data/
+
+Sitemap: https://ownatm.in/sitemap.xml

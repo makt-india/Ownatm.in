@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "clean": "rimraf out",
+    "prebuild": "npm run clean",
+    "build": "next build",
+    "zip": "node scripts/create-zip.js",
+    "start": "next start",
+    "lint": "eslint",
+    "deploy": "npm run build"
+  },
+  "dependencies": {
+    "animejs": "^4.2.2",
+    "archiver": "^7.0.1",
+    "framer-motion": "^12.23.24",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.554.0",
+    "next": "^16.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.3",
+    "rimraf": "^6.1.2",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4"
+  }
+}
