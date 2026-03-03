@@ -1,0 +1,9 @@
+# Force HTTPS
+http://ownatm.in/* https://ownatm.in/:splat 301
+http://www.ownatm.in/* https://ownatm.in/:splat 301
+
+# Remove www
+https://www.ownatm.in/* https://ownatm.in/:splat 301
+
+# Serve folder index.html
+/* /:splat/index.html 200
