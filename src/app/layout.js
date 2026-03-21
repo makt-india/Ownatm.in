@@ -255,13 +255,13 @@ export default function RootLayout({ children }) {
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
         {/* Google Analytics */}
-<Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-FLKBSRN8GY"
-  strategy="afterInteractive"
-/>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FLKBSRN8GY"
+          strategy="lazyOnload"
+        />
 
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -269,11 +269,11 @@ export default function RootLayout({ children }) {
       page_path: window.location.pathname,
     });
   `}
-</Script>
+        </Script>
 
 
         {/* Clarity */}
-        <Script id="clarity-script" strategy="afterInteractive">
+        <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -284,7 +284,7 @@ export default function RootLayout({ children }) {
         </Script>
 
         {/* Facebook Pixel */}
-        <Script id="fb-pixel" strategy="afterInteractive">
+        <Script id="fb-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s){
               if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -307,7 +307,7 @@ export default function RootLayout({ children }) {
             alt=""
           />
         </noscript>
-   <FloatingOfferTab />
+        <FloatingOfferTab />
       </body>
     </html>
   );
