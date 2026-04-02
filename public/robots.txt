@@ -7,4 +7,35 @@ Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /_next/data/
 
+# ------------------------------------
+# GENERATIVE AI & RAG OPTIMIZATION (GEO)
+# Explicitly allowing AI bots to ingest content
+# ------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Omgili
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
 Sitemap: https://ownatm.in/sitemap.xml
