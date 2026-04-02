@@ -5,7 +5,7 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    location: "Tiruchengode, Tamil Nadu",
+    location: "Vellore, Tamil Nadu",
     partner: "EPS Bancs",
     date: "Jan 24, 2026",
     status: "Live & Transacting",

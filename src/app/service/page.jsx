@@ -45,7 +45,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://ownatm.in/images/og/atm-services.webp",
+        url: "https://ownatm.in/img/og/atm-services.webp",
         width: 1200,
         height: 630,
         alt: "ATM Franchise Services India – Installation & Support",
@@ -60,7 +60,7 @@ export const metadata = {
     description:
       "Complete ATM franchise documentation, installation and lifetime coordination support.",
     images: [
-      "https://ownatm.in/images/og/atm-services.webp"
+      "https://ownatm.in/img/og/atm-services.webp"
     ],
   },
 };
@@ -102,7 +102,7 @@ const jsonLd = {
         "itemListElement": [
           {
             "@type": "Offer",
-            "url": "https://ownatm.in/hitachi-atm-franchise",
+            "url": "https://ownatm.in/atm-franchise/hitachi",
             "itemOffered": {
               "@type": "Service",
               "name": "Hitachi MoneySpot ATM Franchise"
@@ -110,7 +110,7 @@ const jsonLd = {
           },
           {
             "@type": "Offer",
-            "url": "https://ownatm.in/eps-atm-franchise",
+            "url": "https://ownatm.in/atm-franchise/eps",
             "itemOffered": {
               "@type": "Service",
               "name": "EPS BANCS ATM Franchise"
@@ -118,7 +118,7 @@ const jsonLd = {
           },
           {
             "@type": "Offer",
-            "url": "https://ownatm.in/findi-atm-franchise",
+            "url": "https://ownatm.in/atm-franchise/findi",
             "itemOffered": {
               "@type": "Service",
               "name": "Findi / Indicash ATM Franchise"
@@ -126,7 +126,7 @@ const jsonLd = {
           },
           {
             "@type": "Offer",
-            "url": "https://ownatm.in/india1-atm-franchise",
+            "url": "https://ownatm.in/atm-franchise/india1",
             "itemOffered": {
               "@type": "Service",
               "name": "India1 ATM Franchise"

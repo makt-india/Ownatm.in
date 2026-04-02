@@ -15,41 +15,12 @@ import {
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  // ✅ ADDED: Structured data for Organization
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "OwnATM",
-    url: "https://ownatm.in",
-    logo: "https://ownatm.in/img/logo-2.webp",
-    description: "India's trusted ATM franchise partner helping entrepreneurs set up profitable ATM businesses.",
-    telephone: "+918883335553",
-    email: "maktin.help@gmail.co",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "IN",
-      addressRegion: "PAN India",
-    },
-    sameAs: [
-      // ✅ TODO: Add your actual social media URLs when available
-      // "https://www.facebook.com/ownatm",
-      // "https://www.instagram.com/ownatm",
-      // "https://www.linkedin.com/company/ownatm",
-      // "https://twitter.com/ownatm",
-    ],
-  };
 
   return (
     <>
-      {/* ✅ ADDED: Structured data for better SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-
       <footer 
         className="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-900 font-sans"
-        role="contentinfo" // ✅ ADDED: Semantic role for footer
+        role="contentinfo"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -101,17 +72,17 @@ export default function Footer() {
               <div className="flex gap-3 pt-4" role="list" aria-label="Social media links">
                 <SocialIcon 
                   icon={<Facebook size={18} />} 
-                  href="https://facebook.com/ownatm" 
+                  href="https://www.facebook.com/profile.php?id=61585119024899" 
                   label="Follow us on Facebook" 
                 />
                 <SocialIcon 
                   icon={<Instagram size={18} />} 
-                  href="https://instagram.com/ownatm" 
+                  href="https://www.instagram.com/ownatm.in" 
                   label="Follow us on Instagram" 
                 />
                 <SocialIcon 
                   icon={<Linkedin size={18} />} 
-                  href="https://linkedin.com/company/ownatm" 
+                  href="https://www.linkedin.com/company/113314102/" 
                   label="Connect on LinkedIn" 
                 />
                 <SocialIcon 
@@ -134,12 +105,14 @@ export default function Footer() {
             </nav>
 
             {/* RESOURCES */}
-            <nav aria-label="Resources"> {/* ✅ ADDED: Semantic nav with label */}
+            <nav aria-label="Resources">
               <h3 className="text-white text-lg font-bold mb-6">Resources</h3>
               <ul className="space-y-3 text-sm">
-                <FooterLink href="/atm-franchise/eps">EPS ATM</FooterLink>
-                <FooterLink href="/atm-franchise/hitachi">Hitachi ATM</FooterLink>
-                <FooterLink href="/resources/blog">Latest Blogs</FooterLink>
+                <FooterLink href="/atm-franchise/eps">EPS ATM Franchise</FooterLink>
+                <FooterLink href="/atm-franchise/hitachi">Hitachi ATM Franchise</FooterLink>
+                <FooterLink href="/atm-franchise/findi">Findi ATM Franchise</FooterLink>
+                <FooterLink href="/atm-franchise/india1">India1 ATM Franchise</FooterLink>
+                <FooterLink href="/resources/blog">Blog &amp; Insights</FooterLink>
                 <FooterLink href="/resources/faq">FAQ &amp; Support</FooterLink>
               </ul>
             </nav>
@@ -168,14 +141,14 @@ export default function Footer() {
                   <Mail 
                     className="shrink-0 text-emerald-400" 
                     size={18} 
-                    aria-hidden="true" // ✅ ADDED: Hide decorative icon
+                    aria-hidden="true"
                   />
                   <a
                     href="mailto:maktin.help@gmail.com"
                     className="hover:text-white transition-colors duration-200 focus:outline-none focus:underline"
-                    aria-label="Email us at maktin.help@gmail.com" // ✅ ADDED: Descriptive label
+                    aria-label="Email us at maktin.help@gmail.com"
                   >
-                maktin.help@gmail.com
+                    maktin.help@gmail.com
                   </a>
                 </div>
               </address>

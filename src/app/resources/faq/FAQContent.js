@@ -82,7 +82,7 @@ export default function FAQContent({ faqs = [] }) {
             </h1>
             <p className="text-purple-100 text-base md:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
               Everything you need to know about starting your ATM franchise.{" "}
-              <Link href="/contact" className="underline hover:text-white font-semibold transition-colors">
+              <Link href="/become-franchise" className="underline hover:text-white font-semibold transition-colors">
                 Contact us
               </Link>{" "}
               if you need personalized help.
@@ -190,7 +190,7 @@ export default function FAQContent({ faqs = [] }) {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/become-franchise"
               className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#4F293D] text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
             >
               Talk to an Expert

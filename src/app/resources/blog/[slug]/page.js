@@ -4,6 +4,203 @@ import BlogPostContent from "./BlogPostContent";
 // STATIC BLOG DATA
 // ---------------------------
 const BLOG_POSTS = [
+  // --- STATE GUIDE: Uttar Pradesh ---
+  {
+    slug: "atm-franchise-in-uttar-pradesh-2026",
+    title: "ATM Franchise in Uttar Pradesh 2026: Investment Cost, Monthly Income & District-Wise Profit Guide",
+    excerpt: "Start an ATM franchise in Uttar Pradesh in 2026. Best cities: Lucknow, Kanpur, Varanasi, Agra. Check investment, monthly income, and ROI.",
+    category: "State Guide",
+    date: "2026-04-01",
+    dateDisplay: "Apr 01, 2026",
+    author: "Marketing Team",
+    featured: true,
+    keywords: ["ATM franchise in Uttar Pradesh 2026", "ATM franchise Lucknow", "ATM franchise Kanpur", "ATM franchise cost UP"],
+    content: `
+  <p>Uttar Pradesh is one of India's largest and most cash-intensive states — making it one of the <strong>most profitable regions for ATM franchise investment in 2026</strong>.</p>
+
+  <p>With a population of 240 million and a large rural economy that still runs on cash, UP offers exceptional opportunity for White Label ATM investors.</p>
+
+  <div class="bg-[#4F293D]/5 p-6 rounded-2xl border border-[#4F293D]/20 my-8 text-center">
+    <h4 class="text-[#4F293D] font-bold mb-2 text-lg">📍 Check Your UP Location Before Investing</h4>
+    <p class="text-sm mb-4">Submit your site details for a free professional feasibility analysis.</p>
+    <a href="/become-franchise" class="inline-block bg-[#4F293D] text-white px-6 py-2 rounded-xl font-bold hover:bg-black transition-colors">
+      Request Free Site Evaluation →
+    </a>
+  </div>
+
+  <h2 class="mt-10 font-bold text-2xl">ATM Franchise Cost in Uttar Pradesh (2026)</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>Security Deposit: ₹2–5 Lakhs (operator-dependent)</li>
+    <li>Working Capital (Cash Float): ₹2–6 Lakhs</li>
+    <li>Site Setup (Electrical, CCTV, UPS): ₹1–2 Lakhs</li>
+  </ul>
+  <p class="font-semibold">Total Estimated Investment: ₹5–13 Lakhs</p>
+
+  <h2 class="mt-10 font-bold text-2xl">Best Cities for ATM Franchise in UP</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>Lucknow:</strong> State capital with high commercial and institutional footfall</li>
+    <li><strong>Kanpur:</strong> Industrial hub with dense market clusters — ideal for 150+ daily transactions</li>
+    <li><strong>Varanasi:</strong> Tourism and pilgrim economy with high cash demand year-round</li>
+    <li><strong>Agra:</strong> Tourism city with strong retail and market sector</li>
+    <li><strong>Meerut, Prayagraj, Gorakhpur:</strong> Fast-growing Tier-2 cities with underserved ATM density</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Monthly Income Potential in UP</h2>
+  <p>Based on 100–150 daily transactions at ₹10–15 commission per cash withdrawal:</p>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>Monthly Gross: ₹30,000 – ₹67,500</li>
+    <li>Net After Expenses: ₹20,000 – ₹50,000</li>
+    <li>ROI Timeline: 18–36 months depending on location</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Best ATM Brands for UP</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>India1 ATM:</strong> Dominant in UP's rural and semi-urban markets — strong cash-loading support</li>
+    <li><strong>Hitachi Money Spot:</strong> Best for Lucknow, Kanpur, Agra urban zones</li>
+    <li><strong>Findi (Indicash):</strong> Strong presence in Varanasi, Gorakhpur corridors</li>
+  </ul>
+
+  <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 my-8">
+    <h4 class="font-bold mb-2">🚀 Ready to Apply for ATM Franchise in UP?</h4>
+    <p class="text-sm mb-4">Our team can help verify your UP location's transaction potential before you commit capital.</p>
+    <a href="/become-franchise" class="text-blue-700 font-bold underline">Apply for ATM Franchise in Uttar Pradesh →</a>
+  </div>
+
+  <h2 class="mt-10 font-bold text-2xl">Final Verdict</h2>
+  <p>Uttar Pradesh ranks among the top 3 states in India for ATM franchise ROI potential. High cash dependency, growing urbanization, and rural banking gaps create consistent demand for well-placed ATMs across all districts.</p>
+  <p>Focus on <strong>high-footfall commercial clusters</strong> near markets, transport hubs, and government offices to maximize your transaction volume and monthly income.</p>
+`
+  },
+
+  // --- STATE GUIDE: Rajasthan ---
+  {
+    slug: "atm-franchise-in-rajasthan-2026",
+    title: "ATM Franchise in Rajasthan 2026: Investment, Monthly Income & City-Wise ROI Guide",
+    excerpt: "Start an ATM franchise in Rajasthan 2026. Best cities: Jaipur, Jodhpur, Kota, Udaipur. Check cost, monthly income, and ROI.",
+    category: "State Guide",
+    date: "2026-04-01",
+    dateDisplay: "Apr 01, 2026",
+    author: "Marketing Team",
+    featured: false,
+    keywords: ["ATM franchise in Rajasthan 2026", "ATM franchise Jaipur", "ATM franchise Jodhpur", "ATM franchise cost Rajasthan"],
+    content: `
+  <p>Rajasthan's vast geography, growing tourism sector, and underserved rural banking infrastructure make it a compelling state for <strong>ATM franchise investment in 2026</strong>.</p>
+
+  <p>Many Tier-3 and Tier-4 towns in Rajasthan still lack adequate ATM coverage, creating a natural demand gap that franchise investors can profitably fill.</p>
+
+  <div class="bg-[#4F293D]/5 p-6 rounded-2xl border border-[#4F293D]/20 my-8 text-center">
+    <h4 class="text-[#4F293D] font-bold mb-2 text-lg">📍 Check Your Rajasthan Location</h4>
+    <p class="text-sm mb-4">Submit your site details for a free feasibility check before investing.</p>
+    <a href="/become-franchise" class="inline-block bg-[#4F293D] text-white px-6 py-2 rounded-xl font-bold hover:bg-black transition-colors">
+      Request Free Site Evaluation →
+    </a>
+  </div>
+
+  <h2 class="mt-10 font-bold text-2xl">ATM Franchise Cost in Rajasthan (2026)</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>Security Deposit: ₹2–5 Lakhs</li>
+    <li>Working Capital: ₹2–6 Lakhs</li>
+    <li>Site Setup: ₹1–2 Lakhs</li>
+  </ul>
+  <p class="font-semibold">Total Estimated Investment: ₹5–13 Lakhs</p>
+
+  <h2 class="mt-10 font-bold text-2xl">Best Cities for ATM Franchise in Rajasthan</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>Jaipur:</strong> Capital city with high commercial density and tourism footfall</li>
+    <li><strong>Jodhpur:</strong> Second largest city with strong market and industrial presence</li>
+    <li><strong>Kota:</strong> Education hub with 200,000+ students — high cash demand</li>
+    <li><strong>Udaipur:</strong> Tourist-heavy economy with year-round cash withdrawal patterns</li>
+    <li><strong>Ajmer, Bikaner, Alwar:</strong> Growing Tier-2 markets with favorable ATM density</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Monthly Income Potential in Rajasthan</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>Urban (Jaipur/Kota): ₹30,000 – ₹60,000/month net</li>
+    <li>Semi-Urban (Ajmer/Alwar): ₹15,000 – ₹35,000/month net</li>
+    <li>ROI Timeline: 20–40 months</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Best ATM Brands for Rajasthan</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>India1:</strong> Strong rural and semi-urban presence across Rajasthan</li>
+    <li><strong>Hitachi:</strong> Best for Jaipur and Jodhpur urban corridors</li>
+    <li><strong>Findi (Indicash):</strong> Solid coverage in smaller town clusters</li>
+  </ul>
+
+  <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-200 my-8">
+    <h4 class="font-bold text-emerald-900 mb-2">✅ Apply for ATM Franchise in Rajasthan</h4>
+    <a href="/become-franchise" class="text-emerald-700 font-bold underline">Start Your Application Now →</a>
+  </div>
+`
+  },
+
+  // --- STATE GUIDE: Gujarat ---
+  {
+    slug: "atm-franchise-in-gujarat-2026",
+    title: "ATM Franchise in Gujarat 2026: Investment Cost, Monthly Profit & City-Wise Business Guide",
+    excerpt: "Start an ATM franchise in Gujarat 2026. Best cities: Ahmedabad, Surat, Vadodara, Rajkot. Check investment, profit, and application process.",
+    category: "State Guide",
+    date: "2026-04-01",
+    dateDisplay: "Apr 01, 2026",
+    author: "Marketing Team",
+    featured: false,
+    keywords: ["ATM franchise in Gujarat 2026", "ATM franchise Ahmedabad", "ATM franchise Surat", "ATM franchise cost Gujarat"],
+    content: `
+  <p>Gujarat's high commercial activity, manufacturing clusters, and strong SME economy make it one of the <strong>most profitable states for ATM franchise investment in 2026</strong>.</p>
+
+  <p>Cities like Surat, Ahmedabad, and Rajkot have thriving textile, diamond, and industrial markets where cash transactions remain dominant despite digital payment adoption.</p>
+
+  <div class="bg-[#4F293D]/5 p-6 rounded-2xl border border-[#4F293D]/20 my-8 text-center">
+    <h4 class="text-[#4F293D] font-bold mb-2 text-lg">📍 Check Your Gujarat Location</h4>
+    <p class="text-sm mb-4">Submit your site for professional ATM feasibility analysis — free of charge.</p>
+    <a href="/become-franchise" class="inline-block bg-[#4F293D] text-white px-6 py-2 rounded-xl font-bold hover:bg-black transition-colors">
+      Request Free Site Evaluation →
+    </a>
+  </div>
+
+  <h2 class="mt-10 font-bold text-2xl">ATM Franchise Cost in Gujarat (2026)</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>Security Deposit: ₹2–5 Lakhs</li>
+    <li>Working Capital (Cash Float): ₹3–7 Lakhs (higher due to commercial activity)</li>
+    <li>Site Setup: ₹1–2 Lakhs</li>
+  </ul>
+  <p class="font-semibold">Total Estimated Investment: ₹6–14 Lakhs</p>
+
+  <h2 class="mt-10 font-bold text-2xl">Best Cities for ATM Franchise in Gujarat</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>Ahmedabad:</strong> Largest city — strong commercial and retail footfall</li>
+    <li><strong>Surat:</strong> Diamond & textile hub with massive daily cash turnover</li>
+    <li><strong>Vadodara:</strong> Industrial and educational city with strong urban economy</li>
+    <li><strong>Rajkot:</strong> Fast-growing Tier-2 city with strong SME presence</li>
+    <li><strong>Bhavnagar, Jamnagar, Anand:</strong> Industrial corridors with favorable ATM gaps</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Monthly Income Potential in Gujarat</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li>High-footfall urban (Surat/Ahmedabad): ₹40,000 – ₹80,000/month net</li>
+    <li>Semi-urban (Rajkot/Anand): ₹20,000 – ₹45,000/month net</li>
+    <li>ROI Timeline: 14–28 months — among lowest in India due to high transaction volumes</li>
+  </ul>
+
+  <h2 class="mt-10 font-bold text-2xl">Best ATM Brands for Gujarat</h2>
+  <ul class="list-disc pl-6 space-y-2 my-4">
+    <li><strong>Hitachi Money Spot:</strong> Excellent for Ahmedabad, Surat metro markets</li>
+    <li><strong>EPS Bancs:</strong> Strong tech infrastructure — suited for Gujarat's business-heavy environment</li>
+    <li><strong>India1:</strong> Best for semi-urban zones and industrial corridors</li>
+  </ul>
+
+  <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 my-8 text-center">
+    <h4 class="font-bold text-indigo-700 mb-3">🚀 Apply for ATM Franchise in Gujarat</h4>
+    <a href="/become-franchise" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-slate-900 transition">
+      Start Your Application →
+    </a>
+  </div>
+
+  <h2 class="mt-10 font-bold text-2xl">Final Verdict</h2>
+  <p>Gujarat's combination of high commerce, industrial clusters, and strong cash usage in textile/diamond markets creates one of the strongest ATM franchise ROI environments in India. Investors targeting Surat or Ahmedabad commercial zones can expect some of the fastest payback timelines nationally.</p>
+`
+  },
+
   // --- POST 1: The Master Guide ---
 {
   slug: "how-to-start-atm-franchise-india-2025",
@@ -219,7 +416,7 @@ const BLOG_POSTS = [
     <p>The choice comes down to your geography. If your commercial space is in a <strong>major city</strong> with high spending power, <strong>Hitachi</strong> offers the brand value to drive volume. However, if your location is in a <strong>small town or village</strong> where cash is still the primary mode of transaction, <strong>India1</strong> is the clear winner for consistent ROI.</p>
     
     <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 my-4 text-sm">
-      <strong>Pro Tizp:</strong> Before making a deposit, check which operator has better cash-loading services in your specific PIN code. You can <a href="/become-franchise" class="text-blue-700 underline font-bold">request a free site feasibility report</a> from our experts.
+      <strong>Pro Tip:</strong> Before making a deposit, check which operator has better cash-loading services in your specific PIN code. You can <a href="/become-franchise" class="text-blue-700 underline font-bold">request a free site feasibility report</a> from our experts.
     </div>
   `,
 },

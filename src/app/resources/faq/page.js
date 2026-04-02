@@ -79,7 +79,7 @@ export const metadata = {
     "Clear answers to common ATM franchise questions in India covering investment cost, earnings potential, documents required, installation process and operations.",
 
   alternates: {
-    canonical: "https://ownatm.in/resources/faq",
+    canonical: "https://ownatm.in/resources/faq/",
   },
 
   robots: {
@@ -91,7 +91,7 @@ export const metadata = {
     title: "ATM Franchise FAQ – Investment & Earnings Explained",
     description:
       "Find answers to ATM franchise cost, monthly income, installation timeline and operational responsibilities.",
-    url: "https://ownatm.in/resources/faq",
+    url: "https://ownatm.in/resources/faq/",
     siteName: "OwnATM",
     type: "website",
     images: [

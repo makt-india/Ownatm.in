@@ -72,7 +72,7 @@ export const jsonLd = {
       },
       "description":
         "OwnATM is an ATM franchise facilitation and coordination platform supporting entrepreneurs with compliant onboarding under RBI-authorized White Label ATM operators.",
-      "foundingDate": "2020",
+      "foundingDate": "2024",
       "areaServed": {
         "@type": "Country",
         "name": "India"
@@ -89,9 +89,9 @@ export const jsonLd = {
         "addressCountry": "IN"
       },
       "sameAs": [
-        "https://www.facebook.com/ownatm",
+        "https://www.facebook.com/profile.php?id=61585119024899",
         "https://www.instagram.com/ownatm.in",
-        "https://www.linkedin.com/company/ownatm"
+        "https://www.linkedin.com/company/113314102/"
       ]
     },
 

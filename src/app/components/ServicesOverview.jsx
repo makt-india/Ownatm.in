@@ -320,14 +320,12 @@ export default function WhyATM() {
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    </div>
-                    <div className="text-sm text-slate-600">
-                      Fast Installation
-                    </div>
+                    <div className="text-2xl font-bold text-slate-900">15 Days</div>
+                    <div className="text-sm text-slate-600">Fast Installation</div>
                   </div>
                 </div>
               </div>
-          
+            </div>
           </FadeIn>
 
           {/* Text Content */}

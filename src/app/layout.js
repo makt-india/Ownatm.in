@@ -106,6 +106,9 @@ export const metadata = {
   manifest: "/manifest.json",
 };
 export const schema = [
+  // -------------------------------------------------------
+  // ORGANIZATION – Global entity, safe on all pages
+  // -------------------------------------------------------
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -127,8 +130,9 @@ export const schema = [
       "availableLanguage": ["English", "Hindi"]
     },
     "sameAs": [
-      "https://www.facebook.com/ownatm.in",
-      "https://www.instagram.com/ownatm.in"
+      "https://www.facebook.com/profile.php?id=61585119024899",
+      "https://www.instagram.com/ownatm.in",
+      "https://www.linkedin.com/company/113314102/"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -140,6 +144,9 @@ export const schema = [
     }
   },
 
+  // -------------------------------------------------------
+  // WEBSITE – Sitelinks searchbox signal
+  // -------------------------------------------------------
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -156,47 +163,15 @@ export const schema = [
     }
   },
 
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://ownatm.in/#webpage",
-    "url": "https://ownatm.in/",
-    "name": "ATM Franchise India 2026 – Investment ₹2–5L & Profit Guide",
-    "isPartOf": {
-      "@id": "https://ownatm.in/#website"
-    },
-    "about": {
-      "@id": "https://ownatm.in/#service"
-    }
-  },
-
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": "https://ownatm.in/#article",
-    "headline": "ATM Franchise India 2026 – Cost, Profit & Apply Online Guide",
-    "description": "Complete guide explaining ATM franchise investment, commission structure and realistic income expectations in India.",
-    "author": {
-      "@type": "Organization",
-      "name": "OwnATM Editorial Team"
-    },
-    "publisher": {
-      "@id": "https://ownatm.in/#organization"
-    },
-    "datePublished": "2026-01-01",
-    "dateModified": "2026-03-02",
-    "mainEntityOfPage": {
-      "@id": "https://ownatm.in/#webpage"
-    }
-  },
-
+  // -------------------------------------------------------
+  // SERVICE – Core offering entity
+  // -------------------------------------------------------
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://ownatm.in/#service",
     "name": "ATM Franchise Setup Service",
-    "description":
-      "Complete ATM franchise setup assistance including location verification, installation coordination and compliance support across India.",
+    "description": "Complete ATM franchise setup assistance including location verification, installation coordination and compliance support across India.",
     "provider": {
       "@id": "https://ownatm.in/#organization"
     },
@@ -204,39 +179,12 @@ export const schema = [
       "@type": "Country",
       "name": "India"
     }
-  },
-
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://ownatm.in/#faq",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does ATM franchise cost in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ATM franchise investment in India typically ranges between ₹2 lakh and ₹5 lakh depending on location, infrastructure and installation requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much monthly income does an ATM franchise generate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Monthly income depends on transaction volume and location footfall. Earnings may range between ₹15,000 and ₹50,000 in high-demand areas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is location approval required for ATM installation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Location must meet visibility, security, power backup and footfall requirements before final installation approval."
-        }
-      }
-    ]
   }
+
+  // NOTE: FAQPage schema intentionally removed from global layout.
+  // Each page that needs FAQPage (franchise sub-pages, /resources/faq)
+  // manages its own to prevent Google Search Console's
+  // "Duplicate field FAQPage" error.
 ];
 export default function RootLayout({ children }) {
   return (

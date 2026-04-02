@@ -27,13 +27,13 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://ownatm.in/blog",
+    canonical: "https://ownatm.in/resources/blog",
   },
 
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://ownatm.in/blog",
+    url: "https://ownatm.in/resources/blog",
     siteName: "OwnATM Franchise India",
     title: "ATM Franchise Blog – Expert Investment Guides & Industry Insights",
     description:
@@ -70,11 +70,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Blog",
-      "@id": "https://ownatm.in/blog/#blog",
+      "@id": "https://ownatm.in/resources/blog/#blog",
       name: "OwnATM Blog",
       description:
         "Expert guides and insights on ATM franchise business in India",
-      url: "https://ownatm.in/blog",
+      url: "https://ownatm.in/resources/blog",
       publisher: {
         "@type": "Organization",
         name: "OwnATM",
@@ -87,7 +87,7 @@ const jsonLd = {
         "@type": "BlogPosting",
         headline: post.title,
         description: post.excerpt,
-        url: `https://ownatm.in/blog/${post.slug}`,
+        url: `https://ownatm.in/resources/blog/${post.slug}`,
         datePublished: post.date,
         dateModified: post.date,
         author: {
@@ -115,7 +115,7 @@ const jsonLd = {
           "@type": "ListItem",
           position: 2,
           name: "Blog",
-          item: "https://ownatm.in/blog",
+          item: "https://ownatm.in/resources/blog",
         },
       ],
     },

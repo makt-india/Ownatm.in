@@ -1,7 +1,21 @@
-"use client";
-
 import Link from "next/link";
 import { ShieldCheck, Zap, Clock, ArrowRight, Gift } from "lucide-react";
+
+// Offer page: promotional utility page – noindex to avoid cannibalization with /become-franchise
+export const metadata = {
+  title: {
+    absolute: "Exclusive ATM Franchise Partner Offers 2026 – Care360 & Zero Fee | OwnATM",
+  },
+  description:
+    "Claim exclusive ATM franchise partner benefits in 2026. Get Care360 lifetime membership free and zero processing fees on your OwnATM franchise application.",
+  alternates: {
+    canonical: "https://ownatm.in/offer-pages",
+  },
+  robots: {
+    index: false,  // Prevent cannibalization – /become-franchise should rank
+    follow: true,
+  },
+};
 
 export default function OfferPage() {
   return (
@@ -47,7 +61,7 @@ export default function OfferPage() {
                 ₹0
               </p>
               <p className="text-xs text-slate-400 mt-1">
-                Free until Feb 28, 2026
+                Active Offer – Apply Now
               </p>
             </div>
 
