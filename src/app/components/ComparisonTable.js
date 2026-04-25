@@ -2,7 +2,7 @@ export default function ComparisonTable() {
   return (
     <section className="py-16 bg-white" id="compare">
       <div className="max-w-7xl mx-auto px-4">
-
+        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 text-center mb-6">
           EPS vs. India1 vs. Findi: 2026 Comparison
         </h2>
 
