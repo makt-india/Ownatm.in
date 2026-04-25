@@ -66,8 +66,7 @@ export default function CTASection() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-       Backed by RBI-regulated ATM operators with proven payouts and nationwide service support.
-          <strong className="font-semibold text-white"> EPS Bancs ,Hitachi, EPS, and Findi</strong>.
+          <strong className="font-semibold text-white"> EPS Bancs, India1, and Findi</strong>.
         </p>
 
         {/* CTA Button - Scale In */}

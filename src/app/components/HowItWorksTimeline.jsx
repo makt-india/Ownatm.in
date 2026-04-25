@@ -7,7 +7,7 @@ const steps = [
   {
     id: 1,
     title: "Application & Documentation",
-    desc: "Submit your KYC (Aadhaar, PAN) and property documents. We process the application with the franchise provider (EPS, Hitachi, etc.).",
+    desc: "Submit your KYC (Aadhaar, PAN) and property documents. We process the application with the franchise provider (EPS, India1, etc.).",
     icon: <FileCheck className="w-6 h-6 text-white" />,
   },
   {

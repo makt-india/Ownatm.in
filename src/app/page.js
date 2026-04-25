@@ -12,7 +12,7 @@ const LoadingSkeleton = ({ height }) => (
       <h3 className="text-lg font-semibold text-slate-700 animate-pulse">
         Loading ATM Franchise Options...
       </h3>
-      <p className="text-sm text-slate-500">EPS, Hitachi, Findi, India1 partners</p>
+      <p className="text-sm text-slate-500">EPS, Findi, India1 partners</p>
     </div>
   </section>
 );
@@ -93,7 +93,7 @@ const homepageSchema = [
         "name": "Which is the best ATM franchise in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The best ATM franchise depends on your location. Hitachi MoneySpot is best for metro cities, India1 leads in rural markets, EPS Bancs offers strong tech infrastructure, and Findi (Indicash) is ideal for semi-urban zones."
+          "text": "The best ATM franchise depends on your location. India1 leads in rural markets, EPS Bancs offers strong tech infrastructure, and Findi (Indicash) is ideal for semi-urban zones."
         }
       },
       {

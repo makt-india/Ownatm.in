@@ -57,15 +57,7 @@ export default function KeyPartners() {
        color: "from-red-500/10 to-red-600/10",
       borderColor: "group-hover:border-red-500/30",
     },
-    {
-      name: "Hitachi ",
-      fullName: "Hitachi ATM Franchise",
-      src: "/img/hitachi.webp",
-      link: "/atm-franchise/hitachi",
-  
-      color: "from-red-500/10 to-red-600/10",
-      borderColor: "group-hover:border-red-500/30",
-    },
+
     {
       name: "India1",
       fullName: "India1 ATM Franchise",
@@ -224,7 +216,7 @@ export default function KeyPartners() {
 
               {/* LOGO/NAME LIST */}
               <div className="flex flex-wrap gap-2 mb-6">
-                {["EPS Bancs", "Hitachi Money Spot", "India1 Payments", "Findi"].map((brand) => (
+                {["EPS Bancs", "India1 Payments", "Findi"].map((brand) => (
                   <span key={brand} className="px-3 py-1 bg-slate-100 border border-slate-200 rounded text-sm font-semibold text-slate-700">
                     {brand}
                   </span>
@@ -247,7 +239,7 @@ export default function KeyPartners() {
             <strong>Transparency Notice:</strong> OwnATM acts as a specialized marketing and 
             onboarding facilitator. The final Franchise Agreement, Asset Ownership, and 
             Financial settlements are executed directly between you and the respective 
-            WLA Operator (Hitachi/India1/EPS).
+            WLA Operator (India1/EPS/Findi).
           </p>
         </div>
       </div>

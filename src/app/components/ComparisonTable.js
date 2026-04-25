@@ -3,8 +3,7 @@ export default function ComparisonTable() {
     <section className="py-16 bg-white" id="compare">
       <div className="max-w-7xl mx-auto px-4">
 
-        <h2 className="text-3xl font-bold text-center mb-4 text-slate-900">
-          EPS vs. Hitachi vs. India1 vs. Findi: 2026 Comparison
+          EPS vs. India1 vs. Findi: 2026 Comparison
         </h2>
 
         <p className="text-center text-slate-500 mb-10 max-w-2xl mx-auto">
@@ -29,7 +28,6 @@ export default function ComparisonTable() {
 
                
                 <th className="py-5 px-6 bg-orange-700 border-l border-orange-600">India1 Payments</th>
-                 <th className="py-5 px-6 bg-blue-900 border-l border-blue-800">Hitachi Money Spot</th>
                 <th className="py-5 px-6 bg-green-800 border-l border-green-700">Findi (Indicash)</th>
               </tr>
             </thead>
@@ -42,7 +40,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 font-bold text-indigo-700">₹2.5L - ₹4.5L</td>
                 
                 <td className="py-4 px-6">₹3.5L - ₹4.5L</td>
-                <td className="py-4 px-6">₹3.5L - ₹5.0L</td>
                 <td className="py-4 px-6">~₹4L</td>
               </tr>
 
@@ -52,7 +49,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 font-bold text-green-600">₹30,000+</td>
                 
                 <td className="py-4 px-6">₹20,000+</td>
-                <td className="py-4 px-6">₹25,000+</td>
                 <td className="py-4 px-6">₹30,000+</td>
               </tr>
 
@@ -61,7 +57,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 font-bold text-slate-900">Security Deposit</td>
                 <td className="py-4 px-6">Low Competitive</td>
                 <td className="py-4 px-6">High</td>
-                <td className="py-4 px-6">Low </td>
                 <td className="py-4 px-6">High</td>
  
               </tr>
@@ -71,7 +66,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 font-bold text-slate-900">Tech & Uptime</td>
                 <td className="py-4 px-6 font-bold text-indigo-700">99.5% (Best in Class)</td>
                 <td className="py-4 px-6">Standard</td>
-                <td className="py-4 px-6">Rugged (Rural)</td>
                    <td className="py-4 px-6">Standard</td>
     
               </tr>
@@ -81,7 +75,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 font-bold text-slate-900">Best Location</td>
                 <td className="py-4 px-6">High Footfall Mkts</td>
                 <td className="py-4 px-6">Metro / Urban</td>
-                <td className="py-4 px-6">Rural / Villages</td>
                 <td className="py-4 px-6">High Footfall Mkts</td>
               </tr>
 
@@ -98,12 +91,6 @@ export default function ComparisonTable() {
                 <td className="py-4 px-6 text-xs leading-relaxed">
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">
                   Rural Leader
-                  </span>
-                </td>
-
-                <td className="py-4 px-6 text-xs leading-relaxed">
-                  <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded">
-                    High Brand Value
                   </span>
                 </td>
 

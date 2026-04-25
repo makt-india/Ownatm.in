@@ -43,12 +43,12 @@ const items = [
   },
   {
     quote:
-      "As a retired banker, I was looking for a low-maintenance investment option. The Hitachi Money Spot ATM was installed within a few weeks after location approval. Monthly settlements are transparent, and I don’t need to manage staff or daily operations.",
+      "As a retired banker, I was looking for a low-maintenance investment option. The Findi ATM was installed within a few weeks after location approval. Monthly settlements are transparent, and I don’t need to manage staff or daily operations.",
     name: "Venkatachalam R.",
     role: "Retired Bank Manager",
     location: "Salem, Tamil Nadu",
     initial: "V",
-    brand: "Hitachi Money Spot Franchise",
+    brand: "Findi ATM Franchise",
   },
   {
     quote:

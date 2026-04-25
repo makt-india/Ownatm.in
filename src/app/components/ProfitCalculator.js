@@ -44,7 +44,6 @@ const AnimatedNumber = ({ value }) => {
 /* ---------------- Configuration Data ---------------- */
 const BRAND_DATA = {
   eps: { name: "EPS", baseCommission: 8.5, color: "bg-blue-600", link: "/atm-franchise/eps" },
-  hitachi: { name: "Hitachi", baseCommission: 9.0, color: "bg-red-600", link: "/atm-franchise/hitachi" },
   findi: { name: "Findi", baseCommission: 8.0, color: "bg-orange-600", link: "/atm-franchise/findi" },
   india1: { name: "India1", baseCommission: 8.0, color: "bg-emerald-600", link: "/atm-franchise/india1" },
 };
@@ -59,7 +58,7 @@ const LOCATION_PRESETS = {
 export default function ProfitCalculator() {
   // Inputs
   const [selectedBrand, setSelectedBrand] = useState("eps");
-  const [compareBrand, setCompareBrand] = useState("hitachi"); // Default comparison
+  const [compareBrand, setCompareBrand] = useState("india1"); // Default comparison
   const [showComparison, setShowComparison] = useState(false);
   
   const [locationType, setLocationType] = useState("semi");

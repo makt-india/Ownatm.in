@@ -65,7 +65,7 @@ export default function AboutContent() {
               <div className="space-y-5 md:space-y-6 text-base md:text-lg text-slate-700 leading-relaxed">
                 <p>
                   <strong className="text-slate-900">OwnATM.in</strong> connects investors with India's leading White Label ATM providers —{" "}
-                  <strong className="text-slate-900">EPS BANCS, Hitachi, Findi, and India1</strong> — enabling shop owners, property owners, and
+                  <strong className="text-slate-900">EPS BANCS, Findi, and India1</strong> — enabling shop owners, property owners, and
                   entrepreneurs to establish high-return ATM units.
                 </p>
 
@@ -136,7 +136,7 @@ export default function AboutContent() {
               />
               <ListItem
                 title="Direct Partnerships With Top ATM Operators"
-                text="We work with India’s most reliable ATM networks — EPS BANCS, Hitachi MoneySpot, India1, and Findi/Indicash. You get verified agreements, transparent SLAs, and official deployment timelines. No unauthorized middlemen, no uncertainty, no fake processing charges."
+                text="We work with India’s most reliable ATM networks — EPS BANCS, India1, and Findi/Indicash. You get verified agreements, transparent SLAs, and official deployment timelines. No unauthorized middlemen, no uncertainty, no fake processing charges."
                 delay={0.15}
               />
               <ListItem
@@ -264,7 +264,7 @@ export default function AboutContent() {
             </h3>
             <p className="text-slate-400 leading-relaxed text-sm md:text-base">
               All installations are legally associated with recognized White Label 
-              ATM operators (Hitachi, India1, EPS). Agreements are executed under 
+              ATM operators (India1, EPS, Findi). Agreements are executed under 
               strict regulatory compliance structures.
             </p>
           </div>

@@ -70,7 +70,7 @@ const jsonLd = {
       "url": "https://ownatm.in/become-franchise",
       "serviceType": "ATM Franchise Application",
       "description":
-        "Apply online to become an ATM franchise partner with EPS, Hitachi MoneySpot, Findi Indicash, or India1. Includes documentation support, site feasibility checks, installation coordination, and onboarding assistance.",
+        "Apply online to become an ATM franchise partner with EPS, Findi Indicash, or India1. Includes documentation support, site feasibility checks, installation coordination, and onboarding assistance.",
       "provider": {
         "@type": "Organization",
         "name": "OwnATM Franchise India",
@@ -102,13 +102,7 @@ const jsonLd = {
               "name": "EPS ATM Franchise"
             }
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hitachi MoneySpot ATM Franchise"
-            }
-          },
+
           {
             "@type": "Offer",
             "itemOffered": {

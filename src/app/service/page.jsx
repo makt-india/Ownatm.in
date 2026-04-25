@@ -11,8 +11,6 @@ export const metadata = {
 
   keywords: [
     "ATM franchise services India",
-    "ATM installation support India",
-    "Hitachi MoneySpot ATM franchise",
     "EPS BANCS ATM franchise",
     "Findi Indicash ATM franchise",
     "India1 ATM franchise"
@@ -100,14 +98,7 @@ const jsonLd = {
         "@type": "OfferCatalog",
         "name": "ATM Franchise Operator Options",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "url": "https://ownatm.in/atm-franchise/hitachi",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Hitachi MoneySpot ATM Franchise"
-            }
-          },
+
           {
             "@type": "Offer",
             "url": "https://ownatm.in/atm-franchise/eps",

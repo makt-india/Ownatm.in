@@ -64,7 +64,7 @@ export default function Footer() {
               <p className="text-slate-400 text-sm leading-relaxed">
                 India's trusted ATM franchise partner. We help you set up
                 profitable ATM businesses with{" "}
-                <strong className="text-slate-300">EPS, Hitachi, Findi, and India1</strong>. Secure,
+                <strong className="text-slate-300">EPS, Findi, and India1</strong>. Secure,
                 transparent, and high-return investment.
               </p>
 
@@ -109,7 +109,6 @@ export default function Footer() {
               <h3 className="text-white text-lg font-bold mb-6">Resources</h3>
               <ul className="space-y-3 text-sm">
                 <FooterLink href="/atm-franchise/eps">EPS ATM Franchise</FooterLink>
-                <FooterLink href="/atm-franchise/hitachi">Hitachi ATM Franchise</FooterLink>
                 <FooterLink href="/atm-franchise/findi">Findi ATM Franchise</FooterLink>
                 <FooterLink href="/atm-franchise/india1">India1 ATM Franchise</FooterLink>
                 <FooterLink href="/resources/blog">Blog &amp; Insights</FooterLink>

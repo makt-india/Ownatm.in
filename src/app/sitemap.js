@@ -20,7 +20,6 @@ export default function sitemap() {
   // ── Brand franchise pages ──────────────────────────────
   const franchisePages = [
     "/atm-franchise/eps",
-    "/atm-franchise/hitachi",
     "/atm-franchise/findi",
     "/atm-franchise/india1",
   ].map((route) => ({

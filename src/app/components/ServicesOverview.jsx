@@ -306,7 +306,7 @@ export default function WhyATM() {
                 src="/img/gwithc.webp"
                 width={700}
                 height={500}
-                alt="Low investment high ROI ATM franchise opportunity with trusted partners like EPS, Hitachi, India1, and Fino Payment Bank"
+                alt="Low investment high ROI ATM franchise opportunity with trusted partners like EPS, India1, and Fino Payment Bank"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="relative w-full h-auto object-cover"
                 loading="lazy"
@@ -356,7 +356,7 @@ export default function WhyATM() {
               <p>
                 Backed by industry leaders like{" "}
                 <strong className="text-slate-900 font-semibold">
-                  EPS BANCS, Hitachi, India1, and Findi 
+                  EPS BANCS, India1, and Findi 
                 </strong>
                 , you benefit from robust backend support, fast settlements, and
                 maximum uptime guarantee.

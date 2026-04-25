@@ -47,7 +47,7 @@ export default function ATMOpportunity() {
     },
     {
       icon: Shield,
-      text: "Official Partners: Hitachi, India1, Findi & EPS",
+      text: "Official Partners: India1, Findi & EPS",
     },
     {
       icon: MapPin,
@@ -121,7 +121,7 @@ export default function ATMOpportunity() {
                 width={700}
                 height={500}
                 // ✅ SEO OPTIMIZED ALT TEXT
-                alt="Profitable ATM franchise business opportunity in India - Compare Hitachi vs India1 ATM cost"
+                alt="Profitable ATM franchise business opportunity in India - Compare EPS vs India1 ATM cost"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="rounded-2xl shadow-2xl border border-slate-200 object-cover w-full h-auto"
                 loading="lazy"

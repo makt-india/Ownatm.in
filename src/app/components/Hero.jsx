@@ -21,7 +21,7 @@ export default function HeroSection() {
         <Image
           // FIX 1: Use direct path if file is in public folder
           src="/img/demo6.webp" 
-          alt="White Label ATM Franchise Installation in India - Hitachi & India1"
+          alt="White Label ATM Franchise Installation in India - India1 & EPS"
           fill
           priority
           sizes="100vw"
@@ -65,7 +65,7 @@ export default function HeroSection() {
             We help you set up a profitable 
             <span className="text-white font-bold"> White Label ATM </span> 
             business anywhere in India. Official partners for 
-            <span className="text-emerald-400"> Hitachi, India1, and EPS</span>. 
+            <span className="text-emerald-400"> India1, EPS and Findi</span>. 
             Get location approval, installation, and lifetime technical support.
           </p>
 

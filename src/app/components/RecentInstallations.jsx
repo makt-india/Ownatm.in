@@ -27,14 +27,6 @@ const projects = [
     status: "Live & Transacting",
     img: "/img/Eps-about2.webp",
   },
-  {
-    id: 4,
-    location: "Namakkal Bus Stand, TN",
-    partner: "Hitachi Money Spot",
-    date: "Nov 22, 2025",
-    status: "Live & Transacting",
-    img: "/img/hitachi-about1.webp",
-  },
 ];
 
 export default function RecentInstallations() {

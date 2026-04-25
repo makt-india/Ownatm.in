@@ -55,12 +55,7 @@ export default function ServiceContent() {
       link: "/atm-franchise/eps",
       icon: <Activity className="w-6 h-6" />,
     },
-    {
-      title: "Hitachi ATM Franchise",
-      desc: "Trusted for high-quality ATM hardware and reliable operations. Full onboarding and installation support handled.",
-      link: "/atm-franchise/hitachi",
-      icon: <Shield className="w-6 h-6" />,
-    },
+
     {
       title: "India1 ATM Franchise",
       desc: "Best for semi-urban and rural markets. Stable monthly revenue with installation and operational support.",

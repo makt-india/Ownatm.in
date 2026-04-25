@@ -7,11 +7,11 @@ import { ArrowRight, Building2, Globe, Banknote, MapPin } from "lucide-react";
 export const metadata = {
   title: {
     absolute:
-      "ATM Franchise in India (2025 Guide) – Compare EPS, Hitachi, Findi & India1 | OwnATM Franchise India",
+      "ATM Franchise in India (2025 Guide) – Compare EPS, Findi & India1 | OwnATM Franchise India",
   },
 
   description:
-    "Compare the best ATM franchise providers in India including EPS, Hitachi MoneySpot, Findi (Indicash) and India1. Get updated cost, requirements, eligibility, documents, installation process and monthly earnings explained clearly.",
+    "Compare the best ATM franchise providers in India including EPS, Findi (Indicash) and India1. Get updated cost, requirements, eligibility, documents, installation process and monthly earnings explained clearly.",
 
   // Optional – kept minimal
   keywords: [
@@ -31,7 +31,7 @@ export const metadata = {
     url: "https://ownatm.in/atm-franchise",
     siteName: "OwnATM Franchise India",
     title:
-      "ATM Franchise in India – Compare EPS, Hitachi, Findi & India1",
+      "ATM Franchise in India – Compare EPS, Findi & India1",
     description:
       "Side-by-side comparison of top ATM franchise providers in India. Cost, eligibility, infrastructure, earnings and requirements explained.",
     images: [
@@ -39,7 +39,7 @@ export const metadata = {
         url: "https://ownatm.in/img/og/atm-franchise.webp",
         width: 1200,
         height: 630,
-        alt: "ATM Franchise Comparison in India – EPS, Hitachi, Findi, India1",
+        alt: "ATM Franchise Comparison in India – EPS, Findi, India1",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "ATM Franchise in India – EPS, Hitachi, Findi, India1 Comparison",
+      "ATM Franchise in India – EPS, Findi, India1 Comparison",
     description:
       "Compare leading ATM franchise options in India with transparent cost, requirements, and earnings.",
     images: ["https://ownatm.in/img/og/atm-franchise.webp"],
@@ -70,8 +70,8 @@ const jsonLd = {
       "url": "https://ownatm.in/atm-franchise",
       "name": "ATM Franchise Providers in India",
       "description":
-        "Comparison list of leading ATM franchise providers in India including EPS, Hitachi MoneySpot, Findi, and India1.",
-      "numberOfItems": 4,
+        "Comparison list of leading ATM franchise providers in India including EPS, Findi, and India1.",
+      "numberOfItems": 3,
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://ownatm.in/atm-franchise"
@@ -96,20 +96,7 @@ const jsonLd = {
             }
           }
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Hitachi MoneySpot ATM Franchise",
-          "url": "https://ownatm.in/atm-franchise/hitachi",
-          "item": {
-            "@type": "Service",
-            "name": "Hitachi MoneySpot ATM Franchise",
-            "areaServed": {
-              "@type": "Country",
-              "name": "India"
-            }
-          }
-        },
+
         {
           "@type": "ListItem",
           "position": 3,
@@ -185,7 +172,7 @@ export default function ATMFranchisePage() {
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Compare the most trusted white-label ATM providers in India –{" "}
-            <span className="font-semibold text-slate-800">EPS, Hitachi, Findi, and India1</span>. 
+            <span className="font-semibold text-slate-800">EPS, Findi, and India1</span>. 
             Choose the best franchise option for your location and investment budget.
           </p>
         </div>
@@ -212,24 +199,7 @@ export default function ATMFranchisePage() {
             </span>
           </Link>
 
-          {/* Hitachi */}
-          <Link
-            href="/atm-franchise/hitachi"
-            className="group relative bg-white p-8 border border-slate-200 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors">
-              <Globe className="w-6 h-6 text-red-600" />
-            </div>
-            <h2 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-700 transition-colors">
-              Hitachi ATM
-            </h2>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              One of India's leading ATM operators. Reliable, secure, and widely used.
-            </p>
-            <span className="inline-flex items-center text-red-600 font-semibold text-sm">
-              View Details <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Link>
+
 
           {/* Findi */}
           <Link
@@ -278,7 +248,7 @@ export default function ATMFranchisePage() {
           </h3>
           <p className="text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
             The best ATM brand depends on your location, footfall, and installation
-            type. <strong>EPS</strong> and <strong>Hitachi</strong> work great in cities, while <strong>India1</strong> performs
+            type. <strong>EPS</strong> works great in cities, while <strong>India1</strong> performs
             exceptionally well in rural and semi-urban regions.
           </p>
 

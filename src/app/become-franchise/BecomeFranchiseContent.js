@@ -225,7 +225,7 @@ const handleSubmit = async (e) => {
               <FeatureRow 
                 icon={<Shield className="w-6 h-6" />}
                 title="Zero Hidden Costs"
-                desc="Transparent pricing for EPS, Hitachi, Findi & India1 providers."
+                desc="Transparent pricing for EPS, Findi & India1 providers."
               />
               <FeatureRow 
                 icon={<CheckCircle className="w-6 h-6" />}
@@ -334,7 +334,6 @@ const handleSubmit = async (e) => {
            required
       options={[
         "EPS ATM",
-        "Hitachi Money Spot",
         "India1 (Indicash)",
         "Findi Payments",
         "Not Sure (Need Advice)"

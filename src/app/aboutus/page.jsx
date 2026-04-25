@@ -10,7 +10,7 @@ export const metadata = {
   },
 
   description:
-    "OwnATM is an ATM franchise facilitation and coordination platform assisting entrepreneurs with compliant onboarding under RBI-authorized White Label ATM operators including EPS, Hitachi Payment Services, Findi and India1.",
+    "OwnATM is an ATM franchise facilitation and coordination platform assisting entrepreneurs with compliant onboarding under RBI-authorized White Label ATM operators including EPS, Findi and India1.",
 
   keywords: [
     "OwnATM India",

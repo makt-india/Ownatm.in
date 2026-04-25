@@ -207,7 +207,6 @@ export default function Header() {
               closeAll={closeAll}
               items={[
                 { label: "EPS Bancs", link: "/atm-franchise/eps" },
-                { label: "Hitachi Money Spot", link: "/atm-franchise/hitachi" },
                 { label: "Findi ATM Franchise", link: "/atm-franchise/findi" },
                 { label: "India1 ATM Franchise", link: "/atm-franchise/india1" },
               ]}
@@ -282,7 +281,6 @@ export default function Header() {
           close={setMenuOpen}
           items={[
             { label: "EPS Bancs", href: "/atm-franchise/eps" },
-            { label: "Hitachi Money Spot", href: "/atm-franchise/hitachi" },
             { label: "Findi ATM Franchise", href: "/atm-franchise/findi" },
             { label: "India1 ATM Franchise", href: "/atm-franchise/india1" },
           ]}
