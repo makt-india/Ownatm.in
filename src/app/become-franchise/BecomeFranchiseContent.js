@@ -44,142 +44,142 @@ const messageSuggestions = [
 
 
 export default function BecomeFranchiseContent() {
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [isSuccess, setIsSuccess] = useState(false);
-const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-const [formData, setFormData] = useState({
-  fullName: "",
-  phone: "",
-  email: "",
-  city: "",
-  provider: "",
-  language: "",
-  message: "",
-});
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    city: "",
+    provider: "",
+    language: "",
+    message: "",
+  });
 
-const formatPhone = (phone) => {
-  const digits = phone.replace(/\D/g, "");
+  const formatPhone = (phone) => {
+    const digits = phone.replace(/\D/g, "");
 
-  if (digits.length === 10) {
-    return "91" + digits;
-  }
+    if (digits.length === 10) {
+      return "91" + digits;
+    }
 
-  if (digits.startsWith("91") && digits.length === 12) {
+    if (digits.startsWith("91") && digits.length === 12) {
+      return digits;
+    }
+
     return digits;
-  }
+  };
 
-  return digits;
-};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const indianMobileRegex = /^91[6-9]\d{9}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const handleChange = (e) => {
-  const { name, value } = e.target;
-  setFormData((prev) => ({
-    ...prev,
-    [name]: value,
-  }));
-};
-const indianMobileRegex = /^91[6-9]\d{9}$/;
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+    if (isSubmitting) return;
 
-  if (isSubmitting) return;
+    setError("");
+    setIsSuccess(false);
 
-  setError("");
-  setIsSuccess(false);
+    const cleanPhone = formatPhone(formData.phone);
 
-  const cleanPhone = formatPhone(formData.phone);
+    // Phone validation
+    if (!indianMobileRegex.test(cleanPhone)) {
+      setError("Enter valid 10-digit Indian mobile number.");
+      return;
+    }
 
-  // Phone validation
-  if (!indianMobileRegex.test(cleanPhone)) {
-    setError("Enter valid 10-digit Indian mobile number.");
-    return;
-  }
+    // Required fields
+    if (
+      !formData.fullName.trim() ||
+      !formData.city.trim() ||
+      !formData.email.trim() ||
+      !formData.provider ||
+      !formData.language ||
+      !formData.message.trim()
+    ) {
+      setError("Please fill all required fields.");
+      return;
+    }
 
-  // Required fields
-  if (
-    !formData.fullName.trim() ||
-    !formData.city.trim() ||
-    !formData.email.trim() ||
-    !formData.provider ||
-    !formData.language ||
-    !formData.message.trim()
-  ) {
-    setError("Please fill all required fields.");
-    return;
-  }
+    // Stronger message validation (avoid garbage leads)
+    if (formData.message.trim().length < 10) {
+      setError("Please describe your query properly (minimum 10 characters).");
+      return;
+    }
 
-  // Stronger message validation (avoid garbage leads)
-  if (formData.message.trim().length < 10) {
-    setError("Please describe your query properly (minimum 10 characters).");
-    return;
-  }
+    // Email validation
+    if (!emailRegex.test(formData.email.trim())) {
+      setError("Enter valid email address.");
+      return;
+    }
 
-  // Email validation
-  if (!emailRegex.test(formData.email.trim())) {
-    setError("Enter valid email address.");
-    return;
-  }
+    setIsSubmitting(true);
 
-  setIsSubmitting(true);
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.fullName.trim());
+      formDataToSend.append("phone", cleanPhone);
+      formDataToSend.append("email", formData.email.trim());
+      formDataToSend.append("city", formData.city.trim());
+      formDataToSend.append("provider", formData.provider);
+      formDataToSend.append("language", formData.language);
+      formDataToSend.append("message", formData.message.trim());
+      formDataToSend.append("source", "ownatm");
+      formDataToSend.append("wa_status", "Pending");
 
-  try {
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.fullName.trim());
-    formDataToSend.append("phone", cleanPhone);
-    formDataToSend.append("email", formData.email.trim());
-    formDataToSend.append("city", formData.city.trim());
-    formDataToSend.append("provider", formData.provider);
-    formDataToSend.append("language", formData.language);
-    formDataToSend.append("message", formData.message.trim());
-    formDataToSend.append("source", "ownatm");
-    formDataToSend.append("wa_status", "Pending");
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxLZkVVsB47mkFWWf_ZQEHcs8myiFnjmNKCtJdcX2drnzw_MFRSZTJQSZFXigMkDnwH8w/exec",
 
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzMwI2gQAKJSHTSHKSi78wimhCvYfbMpOMcICWMw5cEetQWFnYT7vXqu5H-JPsegUy3/exec",
-      
-      {
-        method: "POST",
-        body: formDataToSend,
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Server error");
       }
-    );
 
-    if (!response.ok) {
-      throw new Error("Server error");
+      const text = await response.text();
+      const result = text.trim().toLowerCase();
+
+      if (result.includes("success")) {
+        setIsSuccess(true);
+
+        setFormData({
+          fullName: "",
+          phone: "",
+          email: "",
+          city: "",
+          provider: "",
+          language: "",
+          message: "",
+        });
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+      } else if (result.includes("duplicate")) {
+        setError("This mobile number has already applied.");
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+
+    } catch (err) {
+      setError("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    const text = await response.text();
-    const result = text.trim().toLowerCase();
-
-    if (result.includes("success")) {
-      setIsSuccess(true);
-
-      setFormData({
-        fullName: "",
-        phone: "",
-        email: "",
-        city: "",
-        provider: "",
-        language: "",
-        message: "",
-      });
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
-
-    } else if (result.includes("duplicate")) {
-      setError("This mobile number has already applied.");
-    } else {
-      setError("Something went wrong. Please try again.");
-    }
-
-  } catch (err) {
-    setError("Network error. Please try again.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
   return (
     <div className="relative bg-white min-h-screen font-sans selection:bg-[#4F293D] selection:text-white overflow-hidden">
 
@@ -217,17 +217,17 @@ const handleSubmit = async (e) => {
             </p>
 
             <div className="space-y-6 mb-12">
-              <FeatureRow 
+              <FeatureRow
                 icon={<TrendingUp className="w-6 h-6" />}
                 title="Quick Approval"
                 desc="Get your site approved in 48–72 hours with fast-track processing."
               />
-              <FeatureRow 
+              <FeatureRow
                 icon={<Shield className="w-6 h-6" />}
                 title="Zero Hidden Costs"
                 desc="Transparent pricing for EPS, Findi & India1 providers."
               />
-              <FeatureRow 
+              <FeatureRow
                 icon={<CheckCircle className="w-6 h-6" />}
                 title="Lifetime Support"
                 desc="Technical & operational assistance included 24/7."
@@ -273,143 +273,143 @@ const handleSubmit = async (e) => {
                 Franchise Application
               </h2>
 
-<form onSubmit={handleSubmit} className="space-y-5" noValidate>
+              <form onSubmit={handleSubmit} className="space-y-5" noValidate>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-    <InputField
-      label="Full Name"
-      name="fullName"
-      value={formData.fullName}
-      onChange={handleChange}
-      required
-      placeholder="John Doe"
-    />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <InputField
+                    label="Full Name"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    placeholder="John Doe"
+                  />
 
-    <InputField
-      label="Phone Number"
-      name="phone"
-      type="tel"
-      value={formData.phone}
-      onChange={handleChange}
-      required
-      placeholder="+91 00000 00000"
-    />
-  </div>
+                  <InputField
+                    label="Phone Number"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+91 00000 00000"
+                  />
+                </div>
 
-  <InputField
-    label="Email Address"
-    name="email"
-    type="email"
-    value={formData.email}
-    onChange={handleChange}
-    required
-    placeholder="name@company.com"
-  />
+                <InputField
+                  label="Email Address"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="name@company.com"
+                />
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-    {/* City / State (Typing + Suggestions) */}
-    <InputField
-      label="State"
-      name="city"
-      value={formData.city}
-      onChange={handleChange}
-      required
-      placeholder="Type State or select state"
-      list="cityStates"
-    />
+                  {/* City / State (Typing + Suggestions) */}
+                  <InputField
+                    label="State"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleChange}
+                    required
+                    placeholder="Type State or select state"
+                    list="cityStates"
+                  />
 
-    <datalist id="cityStates">
-      {indianStates.map((state) => (
-        <option key={state} value={state} />
-      ))}
-    </datalist>
+                  <datalist id="cityStates">
+                    {indianStates.map((state) => (
+                      <option key={state} value={state} />
+                    ))}
+                  </datalist>
 
-    {/* Preferred Provider */}
-    <SelectField
-      label="Preferred Provider"
-      name="provider"
-      value={formData.provider}
-      onChange={handleChange}
-           required
-      options={[
-        "EPS ATM",
-        "India1 (Indicash)",
-        "Findi Payments",
-        "Not Sure (Need Advice)"
-      ]}
-    />
+                  {/* Preferred Provider */}
+                  <SelectField
+                    label="Preferred Provider"
+                    name="provider"
+                    value={formData.provider}
+                    onChange={handleChange}
+                    required
+                    options={[
+                      "EPS ATM",
+                      "India1 (Indicash)",
+                      "Findi Payments",
+                      "Not Sure (Need Advice)"
+                    ]}
+                  />
 
-    {/* Preferred Language */}
-    <SelectField
-      label="Preferred Language"
-      name="language"
-      value={formData.language}
-      onChange={handleChange}
-           required
-      options={[
-        "English",
-        "Hindi",
-        "Kannada",
-        "Telugu",
-        "Tamil"
-      ]}
-    />
-  </div>
+                  {/* Preferred Language */}
+                  <SelectField
+                    label="Preferred Language"
+                    name="language"
+                    value={formData.language}
+                    onChange={handleChange}
+                    required
+                    options={[
+                      "English",
+                      "Hindi",
+                      "Kannada",
+                      "Telugu",
+                      "Tamil"
+                    ]}
+                  />
+                </div>
 
-<InputField
-  label="Message / Query"
-  name="message"
-  value={formData.message}
-  onChange={handleChange}
-  placeholder="Select a query or type your own..."
-  list="messageOptions"
-  required
-/>
-<datalist id="messageOptions">
-  {messageSuggestions.map((item) => (
-    <option key={item} value={item} />
-  ))}
-</datalist>
+                <InputField
+                  label="Message / Query"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Select a query or type your own..."
+                  list="messageOptions"
+                  required
+                />
+                <datalist id="messageOptions">
+                  {messageSuggestions.map((item) => (
+                    <option key={item} value={item} />
+                  ))}
+                </datalist>
 
-  <button
-    type="submit"
-    disabled={isSubmitting}
-    className="w-full py-4 bg-[#4F293D] hover:bg-[#3d1f2f] text-white font-bold rounded-xl shadow-lg shadow-[#4F293D]/20 hover:shadow-[#4F293D]/30 active:scale-[0.99] transition-all flex items-center justify-center gap-3"
-  >
-    {isSubmitting ? (
-      <>
-        <Loader2 className="animate-spin w-5 h-5" />
-        Submitting...
-      </>
-    ) : (
-      <>
-        Submit Application
-        <ArrowRight className="w-5 h-5" />
-      </>
-    )}
-  </button>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-4 bg-[#4F293D] hover:bg-[#3d1f2f] text-white font-bold rounded-xl shadow-lg shadow-[#4F293D]/20 hover:shadow-[#4F293D]/30 active:scale-[0.99] transition-all flex items-center justify-center gap-3"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="animate-spin w-5 h-5" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Application
+                      <ArrowRight className="w-5 h-5" />
+                    </>
+                  )}
+                </button>
 
-  <div aria-live="polite" aria-atomic="true">
-    {isSuccess && (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-700 text-sm text-center font-bold flex items-center justify-center gap-2"
-      >
-        <CheckCircle className="w-5 h-5" />
-        Submitted Successfully!
-      </motion.div>
-    )}
+                <div aria-live="polite" aria-atomic="true">
+                  {isSuccess && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="p-4 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-700 text-sm text-center font-bold flex items-center justify-center gap-2"
+                    >
+                      <CheckCircle className="w-5 h-5" />
+                      Submitted Successfully!
+                    </motion.div>
+                  )}
 
-    {error && (
-      <div className="p-4 bg-red-50 border border-red-100 rounded-xl text-red-600 text-sm text-center font-medium">
-        {error}
-      </div>
-    )}
-  </div>
+                  {error && (
+                    <div className="p-4 bg-red-50 border border-red-100 rounded-xl text-red-600 text-sm text-center font-medium">
+                      {error}
+                    </div>
+                  )}
+                </div>
 
-</form>
+              </form>
             </div>
           </motion.div>
         </div>
@@ -422,11 +422,11 @@ const handleSubmit = async (e) => {
 // Helper Components
 // ------------------------------------
 
-function InputField({ label, name, value, onChange, required, type = "text", placeholder = "" , list = null }) {
+function InputField({ label, name, value, onChange, required, type = "text", placeholder = "", list = null }) {
   return (
     <div className="space-y-1.5">
       <label htmlFor={name} className="text-[13px] font-bold text-slate-700 block ml-1">{label} {required && <span className="text-red-500">*</span>}</label>
-      <input id={name} name={name} type={type} required={required} value={value} onChange={onChange} placeholder={placeholder} list={list}  className="w-full px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-[#4F293D]/5 focus:border-[#4F293D] text-slate-900 transition-all placeholder:text-slate-400 text-sm" />
+      <input id={name} name={name} type={type} required={required} value={value} onChange={onChange} placeholder={placeholder} list={list} className="w-full px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-[#4F293D]/5 focus:border-[#4F293D] text-slate-900 transition-all placeholder:text-slate-400 text-sm" />
     </div>
   );
 }
@@ -437,7 +437,7 @@ function SelectField({
   name,
   value,
   onChange,
-       required,
+  required,
   options = []
 }) {
   return (
@@ -452,7 +452,7 @@ function SelectField({
       <select
         id={name}
         name={name}
-   required={required}
+        required={required}
         value={value}
         onChange={onChange}
         className="w-full px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-[#4F293D]/5 focus:border-[#4F293D] text-slate-900 text-sm transition-all appearance-none"
